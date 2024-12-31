@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles/rock-paper-scissors.css">
-    </head>
-  <body>
-    <div>
-        <p class="title">Rock Paper Scissors</p>
-        <button class="move-button" onclick="
-          playGame('rock');
-        "><img class="move-icon" src="images/rock-emoji.png"></button>
 
-        <button class="move-button" onclick="
-          playGame('paper');
-        "><img class="move-icon" src="images/paper-emoji.png"></button>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles/rock-paper-scissors.css">
+</head>
 
-        <button class="move-button" onclick="
-          playGame('scissors');
-        "><img class="move-icon" src="images/scissors-emoji.png"></button>
+<body>
+  <div>
+    <p class="title">Rock Paper Scissors</p>
+    <button class="move-button js-rock-button"><img class=" move-icon" src="images/rock-emoji.png"></button>
 
-        <p class="js-result result"></p>
-        <p class="js-moves move">
-        </p>
-        <p class="js-score score"></p>
+    <button class="move-button js-paper-button"><img class=" move-icon" src="images/paper-emoji.png"></button>
 
-        <button onclick="
+    <button class="move-button js-scissors-button"><img class=" move-icon" src="images/scissors-emoji.png"></button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves move">
+    </p>
+    <p class="js-score score"></p>
+
+    <button onclick="
         score.wins=0; 
         score.losses=0;
         score.ties=0;
         localStorage.removeItem('score');
         updateScoreElement();
         " class="reset-score-button">Reset scores</button>
-    </div>
-    <script src="scripts/rock-paper-scissors-game.js">  
-    </script>
-  </body>
+
+    <button class="auto-play-button">Autoplay</button>
+  </div>
+  <script src="scripts/rock-paper-scissors-game.js">
+  </script>
+</body>
+
 </html>
